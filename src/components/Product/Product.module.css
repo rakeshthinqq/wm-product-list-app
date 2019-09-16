@@ -1,0 +1,74 @@
+.product {
+    /* background-color: beige; */
+    display: inline-grid;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.card {
+    width: 363px;
+    height: 363px;
+    position: relative;
+    cursor: pointer;
+}
+
+.title {
+    position: absolute;
+    height: 55px;
+    width: 100%;
+    background-color: #d6e1de7d;
+    font-weight: bold;
+}
+
+.title > span {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+}
+
+.paper {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    left: 30%;
+    /* margin-left: -50px; */
+    top: 30%;
+    /* margin-top: -50px; */
+
+    background-color: #FFF;
+    border: 2px solid #000;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
+    padding: 1px 3px 4px 3px;
+}
+
+.close{
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+
+.close:hover {
+    opacity: 1;
+  }
+
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+
+.close:before {
+    transform: rotate(45deg);
+  }
+.close:after {
+    transform: rotate(-45deg);
+  }
+.modalStyle {
+
+}
