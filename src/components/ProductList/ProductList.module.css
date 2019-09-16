@@ -1,0 +1,19 @@
+.product {
+    /* background-color: beige; */
+    display: inline-grid;
+    padding: 10px;
+}
+
+.card {
+    width: 363px;
+    height: 363px;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    background-color: #d6e1de7d;
+    font-weight: bold;
+}
