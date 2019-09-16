@@ -34,15 +34,16 @@ export default class ProductList extends React.Component {
         var prodList = '';
         if (this.state.products) {
             var prodList = Object.keys(this.state.products).map((id, index) => {
-                    console.log(this.state.products[id].name);
-                    console.log('Modal param :'+ this.state.open);
-                    return (<Product  
-                                key={index} 
-                                image={this.state.products[id].hero.href}
-                                title={this.state.products[id].name}
-                                imageList={this.state.products[id].images}
-                            />);
-                });
+                console.log(this.state.products[id].name);
+                console.log('Modal param :' + this.state.open);
+                return (<Product
+                    key={index}
+                    image={this.state.products[id].hero.href}
+                    title={this.state.products[id].name}
+                    imageList={this.state.products[id].images}
+                    price={this.state.products[id].priceRange.selling.high}
+                />);
+            });
         }
         return (<div> {prodList} </div>);
     }

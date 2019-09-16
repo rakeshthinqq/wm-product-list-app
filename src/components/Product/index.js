@@ -43,7 +43,14 @@ export default class Product extends React.Component {
             <div className={styles.product}>
                     <Card className={styles.card} onClick={this.showOverlay}>
                         {/* <CardActionArea> */}
-                        <div className={styles.title}><span>{this.props.title.toUpperCase()} </span></div>
+                        <div className={styles.title}>
+                            <span>{this.props.title.toUpperCase()} </span>
+                        </div>
+
+                        <div className={styles.pricediv}>
+                            <span>${this.props.price} </span>
+                        </div>
+
                         <CardMedia
                             component='img'
                             alt='Contemplative Reptile'

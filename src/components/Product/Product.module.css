@@ -78,3 +78,16 @@
 .carousalContainer ul {
   list-style: none;
 }
+
+.pricediv {
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  padding: 5px;
+  background-color: #000;
+}
+
+.pricediv span {
+  color: #FFF;
+  font-weight: bold;
+}
