@@ -40,6 +40,7 @@ export default class ProductList extends React.Component {
                                 key={index} 
                                 image={this.state.products[id].hero.href}
                                 title={this.state.products[id].name}
+                                imageList={this.state.products[id].images}
                             />);
                 });
         }

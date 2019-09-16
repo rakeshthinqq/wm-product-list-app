@@ -2,14 +2,10 @@ import React from 'react';
 import PropsType from 'prop-types';
 import styles from './Product.module.css';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import Modal from '@material-ui/core/Modal';
 
+import Carousal from '../../components/Carousal';
 export default class Product extends React.Component {
 
     constructor(props) {
@@ -62,13 +58,10 @@ export default class Product extends React.Component {
                             onClose={this.handleClose}
                         >
                             <div className={styles.paper}>
-                                <a href='#' className={styles.close} onClick={this.handleClose}/>
-
-                                <h2 id='simple-modal-title'>Text in a modal</h2>
-                                <p id='simple-modal-description'>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                                </p>
-                                {/* <SimpleModal /> */}
+                               <div className={styles.carousalContainer}>
+                                    <a href='#' className={styles.close} onClick={this.handleClose}/>
+                                    <Carousal imageList={this.props.imageList}/>
+                               </div>
                             </div>
                         </Modal>
                     </Card>
@@ -79,5 +72,6 @@ export default class Product extends React.Component {
 
 Product.propsTypes = {
     image : PropsType.string.isRequired,
-    title: PropsType.string.isRequired
+    title: PropsType.string.isRequired,
+    imageList: PropsType.array.isRequired
 }

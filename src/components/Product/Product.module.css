@@ -27,18 +27,17 @@
 }
 
 .paper {
-    height: 400px;
-    width: 400px;
-    position: absolute;
-    left: 30%;
-    /* margin-left: -50px; */
-    top: 30%;
-    /* margin-top: -50px; */
 
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
     background-color: #FFF;
     border: 2px solid #000;
-    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
-    padding: 1px 3px 4px 3px;
+    max-height: 360px;
+    max-width: 360px;
 }
 
 .close{
@@ -48,6 +47,7 @@
     width: 32px;
     height: 32px;
     opacity: 0.3;
+    z-index: 999;
 }
 
 .close:hover {
@@ -69,6 +69,12 @@
 .close:after {
     transform: rotate(-45deg);
   }
-.modalStyle {
+.carousalContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
 
+.carousalContainer ul {
+  list-style: none;
 }
