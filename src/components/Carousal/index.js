@@ -5,6 +5,32 @@ import styles from './Carousal.module.css'
 export default class Carousal extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            currentIndex: 0
+        };
+
+        this.next = this.next.bind(this);
+        this.prev = this.prev.bind(this);
+    }
+
+    next() {
+        var newIndex = this.state.currentIndex + 1;
+        if(newIndex >= this.props.imageList.length) {
+            newIndex = 0;
+        }
+        this.setState({
+            currentIndex: newIndex
+        });
+    }
+
+    prev() {
+        var newIndex = this.state.currentIndex - 1;
+        if(newIndex <= -1) {
+            newIndex = this.props.imageList.length-1;
+        }
+        this.setState({
+            currentIndex: newIndex
+        });
     }
 
     render() {
@@ -13,27 +39,19 @@ export default class Carousal extends React.Component {
             return (<span key={index} className={styles.dot}></span>);
         });
 
-
-        var slides = this.props.imageList.map( (image, index)=>{
-            console.log('carousal img:'+image.href);
-            return (
-                <li key={index} className={styles.slide}>
-                     <img src={image.href} />
-                </li>
-            ); 
-        });
-
-
+        console.log('current index :'+this.state.currentIndex);
         return (
         <div className={styles.carousal}> 
-            <a href='#' className={styles.control_next}>
+            <a href='#' className={styles.control_next} onClick={this.next}>
                 <i className={styles.arrowNext+' '+ styles.arrow}></i>
             </a>
-            <a href='#' className={styles.control_prev}> 
-            <i className={styles.arrowPrev+' '+ styles.arrow}></i>
+            <a href='#' className={styles.control_prev} onClick={this.prev}> 
+                <i className={styles.arrowPrev+' '+ styles.arrow}></i>
             </a>
             <div className={styles.footer}> {dots} </div>
-            {slides}
+            <li className={styles.slide}>
+                <img src={this.props.imageList[this.state.currentIndex].href} />
+            </li>
         </div>)
     }
 }
