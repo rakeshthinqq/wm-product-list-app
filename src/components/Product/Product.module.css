@@ -85,6 +85,7 @@
   left: 20px;
   padding: 5px;
   background-color: #000;
+  border-radius: 3px;
 }
 
 .pricediv span {
