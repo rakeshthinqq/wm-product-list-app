@@ -36,7 +36,11 @@ export default class Carousal extends React.Component {
     render() {
 
         var dots = this.props.imageList.map( (image, index)=>{
-            return (<span key={index} className={styles.dot}></span>);
+            var currentDot ='';
+            if(index === this.state.currentIndex) {
+                currentDot = styles.currentDot;
+            }
+            return (<span key={index} className={styles.dot + ' '+ currentDot}></span>);
         });
 
         console.log('current index :'+this.state.currentIndex);
@@ -48,7 +52,11 @@ export default class Carousal extends React.Component {
             <a href='#' className={styles.control_prev} onClick={this.prev}> 
                 <i className={styles.arrowPrev+' '+ styles.arrow}></i>
             </a>
-            <div className={styles.footer}> {dots} </div>
+            <div className={styles.footer}>
+                <div className={styles.dotwrapper}>
+                    {dots}
+                </div> 
+            </div>
             <li className={styles.slide}>
                 <img src={this.props.imageList[this.state.currentIndex].href} />
             </li>

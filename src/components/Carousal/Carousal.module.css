@@ -7,10 +7,14 @@
 .dot {
     height: 10px;
     width: 10px;
-    background-color: #131212;
+    background-color: #FFF;
     border-radius: 50%;
     display: inline-block;
     margin-right: 5px;
+}
+.currentDot {
+  background-color: #000;
+
 }
 
 .control_prev, .control_next {
@@ -45,10 +49,15 @@
 
   .footer {
     position: absolute;
-    left: 50%;
-    bottom: 1px;
-    right: 50%;
+    bottom: 0px;
     width: 100%;
+    background-color: #58565f75;
+    height: 25px;
+  }
+
+  .dotwrapper{
+    position: relative;
+    text-align: center;
   }
 
   .imagelist {
