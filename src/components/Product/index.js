@@ -41,7 +41,7 @@ export default class Product extends React.Component {
         console.log('Open stat >>' + this.state.open);
         return (
             <div className={styles.product}>
-                    <Card className={styles.card} onClick={this.showOverlay}>
+                    <Card id='#card' className={styles.card} onClick={this.showOverlay}>
                         {/* <CardActionArea> */}
                         <div className={styles.title}>
                             <span>{this.props.title.toUpperCase()} </span>

@@ -46,10 +46,10 @@ export default class Carousal extends React.Component {
         console.log('current index :'+this.state.currentIndex);
         return (
         <div className={styles.carousal}> 
-            <a href='#' className={styles.control_next} onClick={this.next}>
+            <a href='#' id='next' className={styles.control_next} onClick={this.next}>
                 <i className={styles.arrowNext+' '+ styles.arrow}></i>
             </a>
-            <a href='#' className={styles.control_prev} onClick={this.prev}> 
+            <a href='#' id='prev' className={styles.control_prev} onClick={this.prev}> 
                 <i className={styles.arrowPrev+' '+ styles.arrow}></i>
             </a>
             <div className={styles.footer}>
