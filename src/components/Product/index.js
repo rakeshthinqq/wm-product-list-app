@@ -6,6 +6,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Modal from '@material-ui/core/Modal';
 
 import Carousal from '../../components/Carousal';
+
+import history from '../../history';
+
+
 export default class Product extends React.Component {
 
     constructor(props) {
@@ -15,11 +19,13 @@ export default class Product extends React.Component {
         };
         this.showOverlay = this.showOverlay.bind(this);
         this.handleClose = this.handleClose.bind(this);
-        // this.handleOpen = this.handleOpen.bind(this);
     }
 
     showOverlay(event) {
         console.log('showOverlay');
+        console.log('history >>'+ history);
+
+        history.push(this.props.id);
 
         this.setState({
             open: true,
@@ -27,13 +33,12 @@ export default class Product extends React.Component {
         event.stopPropagation();
     }
 
-    
-
     handleClose(event) {
         console.log('handle close');
         this.setState({
             open: false,
         })
+
         event.stopPropagation();
     }
 
@@ -80,5 +85,7 @@ export default class Product extends React.Component {
 Product.propsTypes = {
     image : PropsType.string.isRequired,
     title: PropsType.string.isRequired,
-    imageList: PropsType.array.isRequired
+    imageList: PropsType.array.isRequired,
+    id:PropsType.string.isRequired,
+    baseId:PropsType.string.isRequired
 }
