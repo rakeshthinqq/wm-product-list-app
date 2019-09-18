@@ -8,7 +8,9 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Application will be up and running at 3069 port
+Application will be up and running at
+   
+   http://localhost:3069
 
 
 Run test using below command
