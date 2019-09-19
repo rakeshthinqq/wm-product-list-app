@@ -8,13 +8,17 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Applicatiom woll be up and running at 3000 port
+Application will be up and running at 3069 port
 
 
 Runtest using below command
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test.
+    used chai assertions andenzym for  
+
+    
+
+for more information.
 

@@ -11,8 +11,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router": "^5.0.1",
-    "react-scripts": "3.1.1",
-    "sinon": "^7.4.2"
+    "react-scripts": "3.1.1"
   },
   "scripts": {
     "start": "PORT=3069 react-scripts start",

@@ -5,10 +5,14 @@ const getAllProducts = () => {
         try{
 
             fetch('/services/catalog/v4/category/shop/new/all-new/index.json')
-            .then(function(response) {
-                return response.json();
+            .then((response) =>{
+                if(response) {
+                    return response.json();
+                } else {
+                    throw 'No response from API'
+                }
             })
-            .then(function(myJson) {
+            .then((myJson) =>{
                 resolve(myJson);
             });
         }catch(e){
